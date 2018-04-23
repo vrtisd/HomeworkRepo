@@ -1,0 +1,109 @@
+﻿body {
+    margin: 0;
+    font-family: Arial;
+}
+
+ul.topnavmenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    font-size: 8pt;
+}
+
+    ul.topnavmenu li {
+        float: left;
+    }
+
+        ul.topnavmenu li a.appname {
+            display: block;
+            color: lightgray;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px 16px;
+            font-size: 11pt;
+        }
+
+        ul.topnavmenu li a.menuitem {
+            display: block;
+            color: lightgray;
+            text-align: center;
+            padding: 13px 16px;
+            text-decoration: none;
+        }
+
+            ul.topnavmenu li a.menuitem:hover:not(.active) {
+                background-color: #111;
+            }
+
+            ul.topnavmenu li a.menuitem.active {
+                background-color: #4CAF50;
+            }
+
+        ul.topnavmenu li.right {
+            float: right;
+        }
+
+div.div1 {
+    background-color: #ececec;
+    padding: 0 0 40px 0;
+}
+
+div.div2 {
+    margin: 0 0 0 50px;
+    padding: 40px 0 0 0;
+    font-size: 36pt;
+}
+
+div.div3 {
+    margin: 10px 0 10px 50px;
+    font-size: 11pt;
+}
+
+div.div4 {
+    margin: 40px 0 0 0;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #c7cdd1;
+}
+
+div.div5 {
+    margin: 20px 0 0 10px;
+    font-size: 9pt;
+    color: #808080;
+}
+
+input.input1 {
+    margin: 10px 0 0 50px;
+    color: #ffffff;
+    background-color: #408ac4;
+    border-color: #398439;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 11pt;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+tr.row1 {
+    font: 18pt Arial;
+    color: #408ac4;
+}
+
+tr.row2 {
+    font-size: 8pt;
+}
+
+@media screen and (max-width: 600px) {
+    ul.topnavmenu li.right,
+    ul.topnavmenu li {
+        float: none;
+    }
+}

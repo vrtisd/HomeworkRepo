@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/MyStyle.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <ul class="topnavmenu">
+        <li><a class="appname">Learning Center</a></li>
+        <li><a class="menuitem" href="#home">Home</a></li>
+        <li><a class="menuitem" href="#about">About</a></li>
+        <li><a class="menuitem" href="#contact">Contact</a></li>
+        <li class="right"><a class="menuitem" href="#login">Log In</a></li>
+        <li class="right"><a class="menuitem" href="#register">Register</a></li>
+    </ul>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <div class="div5">&copy; @DateTime.Now.Year - The Learning Center</div>
+
+</body>
+</html>

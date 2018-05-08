@@ -1,0 +1,22 @@
+﻿@model MyWebApp.WebSite.Models.ClassViewModel
+
+@{
+    ViewBag.Title = "Enroll In Class";
+}
+
+<div class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+@using (Html.BeginForm("Enroll", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    <div>
+        @Html.DropDownListFor(c => c.SelectedClass, Model.ClassSelectList, "", new { id="textbox", @class = "form-control" })
+    </div>
+    <br />
+    <div><input type="submit" value="Add Class" class="btn btn-default" /></div>
+}
+

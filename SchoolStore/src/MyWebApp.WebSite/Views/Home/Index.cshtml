@@ -1,0 +1,18 @@
+﻿@model MyWebApp.WebSite.Models.IndexModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>The Learning Center</h1>
+    <p class="lead">The place for technology classes.</p>
+</div>
+<div class="row">
+    @foreach (var menu in Model.Menus)
+    {
+        <div class="col-md-4">
+            <h2>@Html.ActionLink(menu.DisplayText, menu.Name, "Home")</h2>
+            <p>@menu.Description</p>
+        </div>
+    }
+</div>

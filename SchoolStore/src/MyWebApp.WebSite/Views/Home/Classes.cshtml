@@ -1,0 +1,29 @@
+﻿@model MyWebApp.WebSite.Models.ClassViewModel
+
+@{
+    ViewBag.Title = "Classes";
+}
+
+<div class="jumbotron">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+<table width="100%">
+    
+    <tr style="border-top: 1px solid; border-top-color: #e0e0e0">
+        <th style="padding: 10px 30px 10px 0">Name</th>
+        <th style="padding: 10px 30px 10px 0">Description</th>
+        <th style="padding: 10px 30px 10px 0">Price</th>
+    </tr>
+
+    @foreach (var c in Model.Classes)
+    {
+        <tr style="border-top: 1px solid; border-top-color: #e0e0e0">
+            <td style="padding: 10px 30px 10px 0">@c.Name</td>
+            <td style="padding: 10px 30px 10px 0">@c.Description</td>
+            <td style="padding: 10px 30px 10px 0">@string.Format("{0:F2}", c.Price)</td>
+        </tr>
+    }
+</table>
+
+
